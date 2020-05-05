@@ -1,0 +1,30 @@
+@import '../variables'
+    
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    outline: none
+    text-decoration: none
+
+ul, li, ol
+    list-style-type: none
+
+html, body
+    font-family: $font-family
+    line-height: $line-height
+    background-color: $background-color
+    color: $color
+
+button, input, textarea, pre
+    border: 0
+    font-family: $font-family
+    color: inherit
+
+.container
+
+    &.centered
+        min-height: 100vh
+        display: flex
+        align-items: center
+        justify-content: center

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/app.css" />
+	</head>
+	<body>
+		<div class="container dashboard store">
+			@@include('./components/navigation.html', { "active": "store" })
+			<main class="content">
+				@@include('./components/header.html')
+				<div class="body">
+					<div class="cards">
+						<div class="card">
+							<div class="background">
+								<img src="images/background-store-1.png" alt="" />
+							</div>
+							<div class="description">
+								<h4>Снять выговор</h4>
+								<span>Снимает выговор</span>
+
+								<div class="button-group">
+									<a href="#!" class="btn">Купить</a>
+									<p>250</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="card to-left">
+							<div class="background">
+								<img src="images/background-store-2.png" alt="" />
+							</div>
+							<div class="description">
+								<h4>Снять предупреждение</h4>
+								<span>Снимает одно предупреждение</span>
+
+								<div class="button-group">
+									<a href="#!" class="btn">Купить</a>
+									<p>130</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="card center">
+							<div class="background">
+								<img src="images/background-store-3.png" alt="" />
+							</div>
+							<div class="description">
+								<h4>Подарить скин другу</h4>
+								<span>Возможность подарить скин другу</span>
+
+								<div class="button-group">
+									<a href="#!" class="btn">Купить</a>
+									<p>600</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+		<script src="js/app.min.js"></script>
+		<script>
+			const cards = document.querySelectorAll('.cards .card');
+			new app.tilesAnimate(cards, {
+				duration: 1,
+				translateY: 35,
+				delay: 0.9,
+				preventDelay: 0.4
+			});
+		</script>
+	</body>
+</html>

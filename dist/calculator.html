@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/app.css" />
+</head>
+
+<body>
+	<div class="container dashboard calculator">
+		<aside class="navigation">
+			<div class="user-info">
+				<div class="avatar">
+					<img src="images/avatar.png" alt="" />
+					<div class="online"></div>
+				</div>
+				<p class="username">William_Fark</p>
+			</div>
+			<nav>
+				<ul>
+					<li>
+						<a href="/home.html">
+							<div class="icon">
+								<img src="images/icons/home.png" alt="" />
+							</div>
+							<span>Главная</span>
+						</a>
+					</li>
+					<li>
+						<a>
+							<div class="icon">
+								<img src="images/icons/administration.png" alt="" />
+							</div>
+							<span>Администрация</span>
+						</a>
+						<ul>
+							<li>
+								<a href="/administration.html">
+									<span>Пользователи</span>
+								</a>
+							</li>
+							<li>
+								<a class="active" href="/calculator.html">
+									<span>Калькулятор</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="/soft.html">
+							<div class="icon">
+								<img src="images/icons/archive.png" alt="" />
+							</div>
+							<span>Софт</span>
+						</a>
+					</li>
+					<li>
+						<a href="/store.html">
+							<div class="icon">
+								<img src="images/icons/store.png" alt="" />
+							</div>
+							<span>Магазин</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<form action="" method="post">
+				<button type="submit">Выйти</button>
+			</form>
+		</aside>
+
+		<main class="content reset-margin-right">
+			<header>
+				<div class="search-box">
+					<form action="" method="post">
+						<button type="submit">
+							<img src="images/icons/search.png" alt="" />
+						</button>
+						<input type="text" placeholder="Поиск" name="search" />
+					</form>
+				</div>
+				<div class="server-info">
+					<div class="logo">
+						<img src="images/logo-v2.png" alt="" />
+						<span>Arizona RP №11 “Prescott”</span>
+					</div>
+				</div>
+
+			</header>
+
+			<div class="body center">
+				<div class="wrapper-calculator">
+					<div class="calculator-header">
+						<h4>Выберите уровень администратора</h4>
+						<div class="blocks">
+							<div class="block active" data-target="1">1</div>
+							<div class="block" data-target="2">2</div>
+							<div class="block" data-target="3">3</div>
+							<div class="block" data-target="4">4</div>
+						</div>
+					</div>
+					<div class="calculator-body">
+						<div class="blocks">
+							<form action="#!" method="POST" id="1" class="block active">
+								<h4>Введите данные</h4>
+								<input type="text" placeholder="Репорт" />
+								<button type="submit" class="btn">Расчитать</button>
+							</form>
+							<form action="#!" method="POST" id="2" class="block">
+								<h4>Введите данные</h4>
+								<input type="text" placeholder="Репорт" />
+								<input type="text" placeholder="Муты" />
+								<input type="text" placeholder="Деморган" />
+								<button type="submit" class="btn">Расчитать</button>
+							</form>
+							<form action="#!" method="POST" id="3" class="block">
+								<h4>Введите данные</h4>
+								<input type="text" placeholder="Репорт" />
+								<input type="text" placeholder="Муты" />
+								<input type="text" placeholder="Деморган" />
+								<input type="text" placeholder="Варны" />
+								<input type="text" placeholder="Баны" />
+								<input type="text" placeholder="Онлайн(часы:минуты:секунды)" />
+								<button type="submit" class="btn">Расчитать</button>
+							</form>
+							<form action="#!" method="POST" id="4" class="block">
+								<h4>Введите данные</h4>
+								<input type="text" placeholder="Репорт" />
+								<input type="text" placeholder="Муты" />
+								<input type="text" placeholder="Деморган" />
+								<input type="text" placeholder="Варны" />
+								<input type="text" placeholder="Баны" />
+								<input type="text" placeholder="Онлайн(часы:минуты:секунды)" />
+								<button type="submit" class="btn">Расчитать</button>
+							</form>
+						</div>
+					</div>
+					<div class="calculator-footer">
+						<pre>
+								Отвечено репортов: 3124
+								Начислено 150 баллов за выполненную норму
+								И так дале другой текст...
+							</pre>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	<script src="js/app.min.js"></script>
+</body>
+
+</html>

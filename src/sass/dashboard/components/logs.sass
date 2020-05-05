@@ -1,0 +1,252 @@
+@import '../../base/mixins'
+
+.operations-log
+	background-color: #101010
+	$pT: 20px
+	$pX: 17px
+	$pB: 34px
+	$width: 345px
+	box-shadow: 0 10px 29px rgba(0, 0, 0, 0.21)
+	padding: $pT $pX $pB
+	display: flex
+	flex-shrink: 0
+	flex-direction: column
+	width: $width
+	position: fixed
+	top: 0
+	right: 0
+	height: 100%
+	z-index: 15
+
+	@include media($sizes) using ($s)
+		padding: calcR($pT, $s) calcR($pX, $s) calcR($pB, $s)
+
+	@include media-1024
+		max-width: 40%
+
+	.overlay
+		position: absolute
+		right: 0
+		top: 0
+		width: 100vw
+		height: 100vh
+		z-index: -1
+		background-color: rgba(0, 0, 0, .5)
+		visibility: hidden
+		pointer-events: none
+		opacity: 0
+
+	&.active
+		.overlay
+			transition: opacity 0.5s 1s
+
+			@include media-1024
+				visibility: visible
+				opacity: 1
+				pointer-events: auto
+
+
+	.swipe
+		position: absolute
+		right: 100%
+		top: 0
+		bottom: 0
+		$width: 3px
+		width: $width
+		background-color: #ec0143
+		transition: width .2s
+
+		@include media($sizes) using ($s)
+			width: calcR($width, $s)
+
+		&::hover
+			$width: 6px
+			width: $width
+
+			@include media($sizes) using ($s)
+				width: calcR($width, $s)
+
+	h4
+		$size: 20px
+		$bottom: 11px
+		font-size: $size
+		font-weight: 600
+		margin-bottom: $bottom
+
+		@include media($sizes) using ($s)
+			font-size: calcR($size, $s)
+			margin-bottom: calcR($bottom, $s)
+
+	h5
+		$size: 16px
+		$bottom: 22px
+		font-size: $size
+		font-weight: 400
+		margin-bottom: $bottom
+
+		@include media($sizes) using ($s)
+			font-size: calcR($size, $s)
+			margin-bottom: calcR($bottom, $s)
+
+
+	.sort
+		$size: 16px
+		$bottom: 57px
+		display: flex
+		font-size: $size
+		margin-bottom: $bottom
+
+		@include media($sizes) using ($s)
+			font-size: calcR($size, $s)
+			margin-bottom: calcR($bottom, $s)
+
+		span
+			display: flex
+			align-items: flex-end
+			cursor: pointer
+			img
+				$width: 18px
+				$height: 10px
+				width: 18px
+				height: 10px
+
+				@include media($sizes) using ($s)
+					width: calcR($width, $s)
+					height: calcR($height, $s)
+
+		span:nth-child(1)
+			img
+				$left: 11px
+				margin-left: $left
+
+				@include media($sizes) using ($s)
+					margin-left: calcR($left, $s)
+
+		span:nth-child(2)
+			$left: 18px
+			margin-left: $left
+
+			@include media($sizes) using ($s)
+				margin-left: calcR($left, $s)
+			img
+				$left: 17px
+				margin-left: $left
+
+				@include media($sizes) using ($s)
+					margin-left: calcR($left, $s)
+
+		
+	
+	.logs
+		display: grid
+		$gap: 41px
+		grid-gap: $gap
+		height: 100%
+		overflow: auto
+
+		@include media($sizes) using ($s)
+			grid-gap: calcR($gap, $s)
+
+		&::-webkit-scrollbar
+			width: 0
+
+		.log
+			display: grid
+			grid-template-areas: 'avatar date' 'avatar description'
+			grid-template-columns: auto 1fr
+			height: fit-content
+
+			.avatar
+				grid-area: avatar
+				$width: 52px
+				$right: 16px
+				width: $width
+				height: $width
+				margin-right: $right
+				border-radius: 50%
+
+				@include media($sizes) using ($s)
+					width: calcR($width, $s)
+					height: calcR($width, $s)
+					margin-right: calcR($right, $s)
+
+				img
+					width: 100%
+					height: 100%
+					object-fit: contain
+					object-position: center
+
+			.date
+				grid-area: date
+				$mT: 3px
+				$mB: 10px
+				$size: 14px
+				margin: $mT 1px $mB
+				font-size: $size
+				display: flex
+
+				@include media($sizes) using ($s)
+					margin: calcR($mT, $s) 1px calcR($mB, $s)
+					font-size: calcR($size, $s)
+
+				span:nth-child(2)
+					$left: 20px
+					margin-left: $left
+
+					@include media($sizes) using ($s)
+						margin-left: calcR($left, $s)
+
+			.description
+				grid-area: description
+				color: #bbbbc1
+				$size: 13px
+				font-size: $size
+
+				@include media($sizes) using ($s)
+					font-size: calcR($size, $s)
+
+
+	.notes
+		$mTop: 57px
+		margin: $mTop 0 0
+		display: flex
+		flex-direction: column
+		flex-shrink: 0
+
+		@include media($sizes) using ($s)
+			margin: calcR($mTop, $s) 0 0
+
+		p
+			$bottom: 8px
+			$size: 16px
+			margin-bottom: 8px
+			text-align: center
+			font-size: 16px
+			font-weight: 600
+
+			@include media($sizes) using ($s)
+				margin-bottom: calcR($bottom, $s)
+				font-size: calcR($size, $s)
+
+		textarea
+			$radius: 26px
+			$height: 260px
+			$padding: 12px
+			$size: 16px
+			border-radius: $radius
+			background-color: #292833
+			height: $height
+			width: 100%
+			padding: $padding
+			resize: none
+			font-size: $size
+			font-weight: 600
+
+			@include media($sizes) using ($s)
+				border-radius: calcR($radius, $s)
+				height: calcR($height, $s)
+				padding: calcR($padding, $s)
+				font-size: calcR($size, $s)
+
+			&::-webkit-scrollbar
+				width: 0

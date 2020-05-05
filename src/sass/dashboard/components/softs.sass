@@ -1,0 +1,158 @@
+@import '../../base/mixins'
+
+.softs-container
+	display: grid
+	$gap: 71px
+	grid-gap: $gap
+	$width: 600px
+	grid-template-columns: repeat(auto-fill, minmax($width, 1fr))
+
+	@include media($sizes) using ($s)
+		grid-gap: calcR($gap, $s)
+		grid-template-columns: repeat(auto-fill, minmax(calcR($width, $s), 1fr))
+
+	.softs
+		display: grid
+		$gap: 16px
+		$padding: 15px
+		grid-gap: $gap
+		width: $width
+		justify-self: flex-end
+		padding: $padding
+
+		@include media($sizes) using ($s)
+			grid-gap: calcR($gap, $s)
+			width: calcR($width, $s)
+			padding: calcR($padding, $s)
+
+		@include media-1024
+			margin: auto
+
+		.soft
+			width: 100%
+			background-color: #292833
+			display: grid
+			grid-template-areas: 'h4 a' 'p a'
+			$height: 80px
+			$radius: 26px
+			$gap: 11px
+			$pT: 20px
+			$pX: 32px
+			$pB: 24px
+			height: $height
+			border-radius: $radius
+			grid-gap: $gap
+			padding: $pT $pX $pB
+			align-items: center
+			cursor: pointer
+			transition: transform .1s, box-shadow .1s
+			transform-origin: center right
+
+			@include media($sizes) using ($s)
+				height: calcR($height, $s)
+				border-radius: calcR($radius, $s)
+				grid-gap: calcR($gap, $s)
+				padding: calcR($pT, $s) calcR($pX, $s) calcR($pB, $s)
+
+			&:hover, &.active
+				transform: scale(1.05)!important
+				box-shadow: 0 0 15px rgba(0, 0, 0, 0.4)
+
+			h4
+				grid-area: h4
+				font-weight: 600
+				$size: 16px
+				font-size: $size
+
+				@include media($sizes) using ($s)
+					font-size: calcR($size, $s)
+
+			p
+				grid-area: p
+				$size: 13px
+				font-size: $size
+
+				@include media($sizes) using ($s)
+					font-size: calcR($size, $s)
+
+			a.btn
+				grid-area: a
+				$width: 109px
+				$height: 30px
+				$radius: 15px
+				$size: 12px
+				width: $width
+				height: $height
+				box-shadow: 0 6px 16px rgba(255, 0, 0, 0.29)
+				border-radius: $radius
+				background-color: #ec0143
+				font-size: $size
+				color: #ffffff
+				font-weight: 600
+				display: flex
+				align-items: center
+				justify-content: center
+				justify-self: flex-end
+
+				@include media($sizes) using ($s)
+					font-size: calcR($size, $s)
+					width: calcR($width, $s)
+					height: calcR($height, $s)
+					border-radius: calcR($radius, $s)
+
+			.data
+				display: none
+
+	.information
+
+		.wrapper
+			position: sticky
+			$top: 230px
+			$pY: 21px
+			$pX: 45px
+			$width: 600px
+			$height: 457px
+			$radius: 26px
+			top: $top
+			padding: $pY $pX
+			width: $width
+			height: $height
+			border-radius: $radius
+			background-color: #292833
+			display: flex
+			flex-direction: column
+
+			@include media($sizes) using ($s)
+				top: calcR($top, $s)
+				padding: calcR($pY, $s) calcR($pX, $s)
+				width: calcR($width, $s)
+				height: calcR($height, $s)
+				border-radius: calcR($radius, $s)
+
+			@include media-1024
+				margin: auto
+
+			h4
+				$size: 16px
+				$bottom: 21px
+				font-size: $size
+				font-weight: 600
+				margin-bottom: $bottom
+				flex-shrink: 0
+
+				@include media($sizes) using ($s)
+					font-size: calcR($size, $s)
+					margin-bottom: calcR($bottom, $s)
+
+			.data
+				$size: 16px
+				font-size: $size
+				max-height: 100%
+				overflow-y: auto
+
+				@include media($sizes) using ($s)
+					font-size: calcR($size, $s)
+
+				&::-webkit-scrollbar
+					width: 0
+

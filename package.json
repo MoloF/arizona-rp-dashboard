@@ -1,0 +1,67 @@
+{
+	"name": "project-name",
+	"version": "0.0.1",
+	"description": "A description for your project.",
+	"main": "./dist/your-main-js-file.js",
+	"author": {
+		"name": "MoloF",
+		"url": "http://link-to-your-website.com"
+	},
+	"scripts": {
+		"serve": "gulp watch",
+		"build": "gulp"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "http://link-to-your-git-repo.com"
+	},
+	"boilerplate": {
+		"version": "2.2.6",
+		"author": "Chris Ferdinandi",
+		"url": "https://gomakethings.com",
+		"repo": "http://github.com/cferdinandi/gulp-boilerplate"
+	},
+	"browserslist": [
+		"last 2 versions",
+		"> 0.25%"
+	],
+	"devDependencies": {
+		"@babel/core": "^7.9.0",
+		"autoprefixer": "9.6.1",
+		"browser-sync": "2.26.7",
+		"cssnano": "4.1.10",
+		"del": "3.0.0",
+		"gulp": "^4.0.2",
+		"gulp-better-rollup": "^4.0.1",
+		"gulp-concat": "2.6.1",
+		"gulp-file-include": "^2.1.1",
+		"gulp-flatmap": "1.0.2",
+		"gulp-header": "2.0.5",
+		"gulp-html-beautify": "^1.0.1",
+		"gulp-jshint": "2.1.0",
+		"gulp-optimize-js": "^1.1.0",
+		"gulp-postcss": "8.0.0",
+		"gulp-rename": "1.4.0",
+		"gulp-sass": "^4.0.2",
+		"gulp-svgmin": "2.1.0",
+		"gulp-terser": "1.1.7",
+		"jshint": "^2.11.0",
+		"jshint-stylish": "2.2.1",
+		"lazypipe": "1.0.1",
+		"node-sass": "^4.14.0",
+		"rollup": "^2.2.0",
+		"rollup-plugin-babel": "^4.4.0",
+		"rollup-plugin-commonjs": "^10.1.0",
+		"rollup-plugin-node-resolve": "^5.2.0",
+		"webpack-stream": "^5.2.1"
+	},
+	"dependencies": {
+		"charming": "^3.0.2",
+		"dart-sass": "^1.25.0",
+		"gsap": "^3.2.6",
+		"gulp-htmlmin": "^5.0.1",
+		"gulp-include": "^2.4.1",
+		"sass-loader": "^8.0.2"
+	}
+}

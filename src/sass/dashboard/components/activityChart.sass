@@ -1,0 +1,159 @@
+@import '../../base/mixins'
+	
+.activity-chart
+	$height: 386px
+	$radius: 26px
+	$top: 29px
+	$pTop: 18px
+	$pX: 53px
+	$pBottom: 49px
+	height: $height
+	background-color: #292833
+	border-radius: $radius
+	margin-top: $top
+	padding: $pTop $pX $pBottom
+	display: flex
+	flex-direction: column
+
+	@include media($sizes) using ($s)
+		height: calcR($height, $s)
+		border-radius: calcR($radius, $s)
+		margin-top: calcR($top, $s)
+		padding: calcR($pTop, $s) calcR($pX, $s) calcR($pBottom, $s)
+
+	h4
+		$bottom: 24px
+		$size: 21px
+		$line: 15px
+		margin-bottom: $bottom
+		font-size: $size
+		letter-spacing: 0.28px
+		font-weight: 600
+		line-height: $line
+
+		@include media($sizes) using ($s)
+			margin-bottom: calcR($bottom, $s)
+			font-size: calcR($size, $s)
+			line-height: calcR($line, $s)
+
+
+	.chart
+		display: grid
+		$width: 37px
+		grid-template-columns: repeat(10, minmax($width, 1fr))
+		$pX: 21px
+		$gap: 58px
+		padding: 0 $pX
+		grid-gap: $gap
+		height: 100%
+
+		@include media($sizes) using ($s)
+			padding: 0 calcR($pX, $s)
+			grid-gap: calcR($gap, $s) / 2
+			grid-template-columns: repeat(10, minmax(calcR($width, $s), 1fr))
+
+		.bar
+			height: 100%
+			display: flex
+			flex-direction: column
+			width: $width
+			justify-content: flex-end
+
+			@include media($sizes) using ($s)
+				width: calcR($width, $s)
+
+			&.hidden
+				visibility: hidden
+
+			.inner
+				display: block
+				width: 100%
+				box-shadow: 0 6px 16px rgba(255, 0, 0, 0.29)
+				$radius: 19px
+				border-radius: $radius $radius 0 0
+				transform-origin: bottom
+				background-image: linear-gradient(to top, #ec0143 0%, #ff6d6d 100%)
+				position: relative
+				cursor: help
+
+				@include media($sizes) using ($s)
+					border-radius: calcR($radius, $s) calcR($radius, $s) 0 0
+
+				.info
+					display: flex
+					flex-direction: column
+					align-items: center
+					position: absolute
+					left: 50%
+					bottom: 100%
+					$translateY: -10px
+					$mY: 19px
+					transform: translate(-50%, $translateY)
+					margin: $mY 0
+					font-weight: 600
+					visibility: hidden
+					opacity: 0
+					transition: visibility .2s 0s, transform .2s, opacity .2s
+
+					@include media($sizes) using ($s)
+						transform: translate(-50%, calcR($translateY, $s))
+						margin: calcR($mY, $s) 0
+
+					p
+						color: #ef154b
+						$size: 24px
+						$line: 17px
+						font-size: $size
+						line-height: $line
+
+						@include media($sizes) using ($s)
+							font-size: calcR($size, $s)
+							line-height: calcR($line, $s)
+
+					span
+						$top: 8px
+						$size: 13px
+						$line: 9px
+						margin-top: $top
+						color: #ababb3
+						font-size: $size
+						line-height: $line
+
+						@include media($sizes) using ($s)
+							margin-top: calcR($top, $s)
+							font-size: calcR($size, $s)
+							line-height: calcR($line, $s)
+
+					&.bottom
+						bottom: auto
+						top: 0
+						left: 100%
+						transform: translate(10px, 0)
+						$mX: 8px
+						margin: 0 $mX
+
+						@include media($sizes) using ($s)
+							margin: 0 calcR($mX, $s)
+
+				&:hover
+					.info
+						opacity: 1
+						visibility: visible
+						transform: translate(-50%, 0)
+						transition: visibility 0s 0s, transform .2s, transform .2s
+
+						&.bottom
+							transform: translate(0, 0)
+
+
+			.label
+				$top: 17px
+				$size: 21px
+				font-size: $size
+				color: #c4c4c9
+				text-align: center
+				margin-top: $top
+
+				@include media($sizes) using ($s)
+					margin-top: calcR($top, $s)
+					font-size: calcR($size, $s)

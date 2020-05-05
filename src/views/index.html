@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/app.css" />
+	</head>
+	<body>
+		<div class="container centered">
+			<form class="authorization sign-in" action="" method="POST">
+				<div class="background">
+					<img src="images/authorization-background-shape.png" alt="" />
+				</div>
+				<h2>Добро пожаловать!</h2>
+				<div class="input-group">
+					<div class="icon">
+						<img src="images/icons/user.png" alt="" />
+					</div>
+					<input type="text" placeholder="Ссылка на ВКонтакте" />
+				</div>
+				<div class="input-group">
+					<div class="icon button cursor">
+						<img src="images/icons/lock.png" alt="" />
+					</div>
+					<input class="input" type="password" placeholder="Пароль" />
+				</div>
+				<button type="submit">Войти</button>
+				<a href="#!">Авторизоваться через ВК</a>
+				<p>Вы забыли пароль? <a href="#!">Восстановить</a></p>
+			</form>
+		</div>
+
+		<script src="js/app.min.js"></script>
+		<script>
+			const button = document.querySelector('.button');
+			const input = document.querySelector('.input');
+			new app.ShowPassword(button, input);
+		</script>
+	</body>
+</html>

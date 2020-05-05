@@ -1,0 +1,25 @@
+@import './functions'
+
+$media-576: 576
+$media-1024: 1024
+$media-1280: 1280
+$media-1366: 1366
+$media-1600: 1600
+$media-default: 1920
+$media-2560: 2560
+$media-3840: 3840
+
+$sizes: $media-3840, $media-2560, $media-default, $media-1600, $media-1366, $media-1280, $media-1024, $media-576
+
+@mixin media($sizes)
+	@each $size in $sizes
+		@media (max-width: #{$size + 1px})
+			@content( $size )
+
+@function calcR($value, $resolution, $originalResolution: $media-default)
+	$difference: $resolution / $originalResolution
+	@return to-fixed($value * $difference)
+
+@mixin media-1024
+	@media (max-width: #{$media-1024 + 1px})
+		@content()

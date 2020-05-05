@@ -1,0 +1,504 @@
+/*! project-name v0.0.1 | (c) 2020 MoloF | MIT License | http://link-to-your-git-repo.com */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 55px 66px;
+  padding-top: 28px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  justify-items: center;
+}
+@media (max-width: 3841px) {
+  .cards {
+    grid-gap: 110px 132px;
+    padding-top: 56px;
+  }
+}
+@media (max-width: 2561px) {
+  .cards {
+    grid-gap: 73.3px 88px;
+    padding-top: 37.3px;
+  }
+}
+@media (max-width: 1921px) {
+  .cards {
+    grid-gap: 55px 66px;
+    padding-top: 28px;
+  }
+}
+@media (max-width: 1601px) {
+  .cards {
+    grid-gap: 45.8px 55px;
+    padding-top: 23.3px;
+  }
+}
+@media (max-width: 1367px) {
+  .cards {
+    grid-gap: 39.1px 47px;
+    padding-top: 19.9px;
+  }
+}
+@media (max-width: 1281px) {
+  .cards {
+    grid-gap: 36.7px 44px;
+    padding-top: 18.7px;
+  }
+}
+@media (max-width: 1025px) {
+  .cards {
+    grid-gap: 29.3px 35.2px;
+    padding-top: 14.9px;
+  }
+}
+@media (max-width: 577px) {
+  .cards {
+    grid-gap: 16.5px 19.8px;
+    padding-top: 8.4px;
+  }
+}
+@media (max-width: 1025px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+.cards .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 566px;
+  position: relative;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  z-index: 0;
+}
+@media (max-width: 3841px) {
+  .cards .card {
+    width: 1132px;
+  }
+}
+@media (max-width: 2561px) {
+  .cards .card {
+    width: 754.7px;
+  }
+}
+@media (max-width: 1921px) {
+  .cards .card {
+    width: 566px;
+  }
+}
+@media (max-width: 1601px) {
+  .cards .card {
+    width: 471.7px;
+  }
+}
+@media (max-width: 1367px) {
+  .cards .card {
+    width: 402.7px;
+  }
+}
+@media (max-width: 1281px) {
+  .cards .card {
+    width: 377.3px;
+  }
+}
+@media (max-width: 1025px) {
+  .cards .card {
+    width: 301.9px;
+  }
+}
+@media (max-width: 577px) {
+  .cards .card {
+    width: 169.8px;
+  }
+}
+.cards .card.center {
+  grid-column: 1/3;
+  justify-self: center;
+}
+@media (max-width: 1025px) {
+  .cards .card.center {
+    grid-column: auto;
+  }
+}
+.cards .card.to-left .description {
+  left: auto;
+  right: 0;
+  margin: 0 40px 40px;
+}
+@media (max-width: 3841px) {
+  .cards .card.to-left .description {
+    margin: 0 80px 80px;
+  }
+}
+@media (max-width: 2561px) {
+  .cards .card.to-left .description {
+    margin: 0 53.3px 53.3px;
+  }
+}
+@media (max-width: 1921px) {
+  .cards .card.to-left .description {
+    margin: 0 40px 40px;
+  }
+}
+@media (max-width: 1601px) {
+  .cards .card.to-left .description {
+    margin: 0 33.3px 33.3px;
+  }
+}
+@media (max-width: 1367px) {
+  .cards .card.to-left .description {
+    margin: 0 28.5px 28.5px;
+  }
+}
+@media (max-width: 1281px) {
+  .cards .card.to-left .description {
+    margin: 0 26.7px 26.7px;
+  }
+}
+@media (max-width: 1025px) {
+  .cards .card.to-left .description {
+    margin: 0 21.3px 21.3px;
+  }
+}
+@media (max-width: 577px) {
+  .cards .card.to-left .description {
+    margin: 0 12px 12px;
+  }
+}
+.cards .card .background {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  -webkit-transition: -webkit-filter 0.5s;
+  transition: -webkit-filter 0.5s;
+  transition: filter 0.5s;
+  transition: filter 0.5s, -webkit-filter 0.5s;
+}
+@media (max-width: 1025px) {
+  .cards .card .background {
+    max-width: 100%;
+  }
+}
+.cards .card .background img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 1025px) {
+  .cards .card .background img {
+    max-width: 100%;
+  }
+}
+.cards .card:hover .background {
+  -webkit-filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.4));
+          filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.4));
+}
+.cards .card .description {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 0 0 40px 96px;
+  height: 190px;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media (max-width: 3841px) {
+  .cards .card .description {
+    margin: 0 0 80px 192px;
+    height: 380px;
+  }
+}
+@media (max-width: 2561px) {
+  .cards .card .description {
+    margin: 0 0 53.3px 128px;
+    height: 253.3px;
+  }
+}
+@media (max-width: 1921px) {
+  .cards .card .description {
+    margin: 0 0 40px 96px;
+    height: 190px;
+  }
+}
+@media (max-width: 1601px) {
+  .cards .card .description {
+    margin: 0 0 33.3px 80px;
+    height: 158.3px;
+  }
+}
+@media (max-width: 1367px) {
+  .cards .card .description {
+    margin: 0 0 28.5px 68.3px;
+    height: 135.2px;
+  }
+}
+@media (max-width: 1281px) {
+  .cards .card .description {
+    margin: 0 0 26.7px 64px;
+    height: 126.7px;
+  }
+}
+@media (max-width: 1025px) {
+  .cards .card .description {
+    margin: 0 0 21.3px 51.2px;
+    height: 101.3px;
+  }
+}
+@media (max-width: 577px) {
+  .cards .card .description {
+    margin: 0 0 12px 28.8px;
+    height: 57px;
+  }
+}
+.cards .card .description h4 {
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 11px;
+}
+@media (max-width: 3841px) {
+  .cards .card .description h4 {
+    font-size: 44px;
+    margin-bottom: 22px;
+  }
+}
+@media (max-width: 2561px) {
+  .cards .card .description h4 {
+    font-size: 29.3px;
+    margin-bottom: 14.7px;
+  }
+}
+@media (max-width: 1921px) {
+  .cards .card .description h4 {
+    font-size: 22px;
+    margin-bottom: 11px;
+  }
+}
+@media (max-width: 1601px) {
+  .cards .card .description h4 {
+    font-size: 18.3px;
+    margin-bottom: 9.2px;
+  }
+}
+@media (max-width: 1367px) {
+  .cards .card .description h4 {
+    font-size: 15.7px;
+    margin-bottom: 7.8px;
+  }
+}
+@media (max-width: 1281px) {
+  .cards .card .description h4 {
+    font-size: 14.7px;
+    margin-bottom: 7.3px;
+  }
+}
+@media (max-width: 1025px) {
+  .cards .card .description h4 {
+    font-size: 11.7px;
+    margin-bottom: 5.9px;
+  }
+}
+@media (max-width: 577px) {
+  .cards .card .description h4 {
+    font-size: 6.6px;
+    margin-bottom: 3.3px;
+  }
+}
+.cards .card .description span {
+  font-size: 13px;
+  font-weight: 300;
+}
+@media (max-width: 3841px) {
+  .cards .card .description span {
+    font-size: 26px;
+  }
+}
+@media (max-width: 2561px) {
+  .cards .card .description span {
+    font-size: 17.3px;
+  }
+}
+@media (max-width: 1921px) {
+  .cards .card .description span {
+    font-size: 13px;
+  }
+}
+@media (max-width: 1601px) {
+  .cards .card .description span {
+    font-size: 10.8px;
+  }
+}
+@media (max-width: 1367px) {
+  .cards .card .description span {
+    font-size: 9.2px;
+  }
+}
+@media (max-width: 1281px) {
+  .cards .card .description span {
+    font-size: 8.7px;
+  }
+}
+@media (max-width: 1025px) {
+  .cards .card .description span {
+    font-size: 6.9px;
+  }
+}
+@media (max-width: 577px) {
+  .cards .card .description span {
+    font-size: 3.9px;
+  }
+}
+.cards .card .description .button-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto 0 0;
+}
+.cards .card .description .btn {
+  width: 146px;
+  height: 40px;
+  -webkit-box-shadow: 0 6px 16px rgba(255, 0, 0, 0.29);
+          box-shadow: 0 6px 16px rgba(255, 0, 0, 0.29);
+  border-radius: 13px;
+  background-color: #ec0143;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  font-weight: 300;
+}
+@media (max-width: 3841px) {
+  .cards .card .description .btn {
+    width: 292px;
+    height: 80px;
+    border-radius: 26px;
+    font-size: 32px;
+  }
+}
+@media (max-width: 2561px) {
+  .cards .card .description .btn {
+    width: 194.7px;
+    height: 53.3px;
+    border-radius: 17.3px;
+    font-size: 21.3px;
+  }
+}
+@media (max-width: 1921px) {
+  .cards .card .description .btn {
+    width: 146px;
+    height: 40px;
+    border-radius: 13px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 1601px) {
+  .cards .card .description .btn {
+    width: 121.7px;
+    height: 33.3px;
+    border-radius: 10.8px;
+    font-size: 13.3px;
+  }
+}
+@media (max-width: 1367px) {
+  .cards .card .description .btn {
+    width: 103.9px;
+    height: 28.5px;
+    border-radius: 9.2px;
+    font-size: 11.4px;
+  }
+}
+@media (max-width: 1281px) {
+  .cards .card .description .btn {
+    width: 97.3px;
+    height: 26.7px;
+    border-radius: 8.7px;
+    font-size: 10.7px;
+  }
+}
+@media (max-width: 1025px) {
+  .cards .card .description .btn {
+    width: 77.9px;
+    height: 21.3px;
+    border-radius: 6.9px;
+    font-size: 8.5px;
+  }
+}
+@media (max-width: 577px) {
+  .cards .card .description .btn {
+    width: 43.8px;
+    height: 12px;
+    border-radius: 3.9px;
+    font-size: 4.8px;
+  }
+}
+.cards .card .description p {
+  margin-left: 18px;
+  font-weight: 600;
+  font-size: 16px;
+}
+@media (max-width: 3841px) {
+  .cards .card .description p {
+    margin-left: 36px;
+    font-size: 32px;
+  }
+}
+@media (max-width: 2561px) {
+  .cards .card .description p {
+    margin-left: 24px;
+    font-size: 21.3px;
+  }
+}
+@media (max-width: 1921px) {
+  .cards .card .description p {
+    margin-left: 18px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 1601px) {
+  .cards .card .description p {
+    margin-left: 15px;
+    font-size: 13.3px;
+  }
+}
+@media (max-width: 1367px) {
+  .cards .card .description p {
+    margin-left: 12.8px;
+    font-size: 11.4px;
+  }
+}
+@media (max-width: 1281px) {
+  .cards .card .description p {
+    margin-left: 12px;
+    font-size: 10.7px;
+  }
+}
+@media (max-width: 1025px) {
+  .cards .card .description p {
+    margin-left: 9.6px;
+    font-size: 8.5px;
+  }
+}
+@media (max-width: 577px) {
+  .cards .card .description p {
+    margin-left: 5.4px;
+    font-size: 4.8px;
+  }
+}

@@ -1,0 +1,62 @@
+@import '../../base/mixins'
+
+.activity-list
+	background-color: #292833
+	$radius: 26px
+	$top: 17px
+	$pT: 29px
+	$pR: 34px
+	$pB: 26px
+	$pL: 53px
+	border-radius: $radius
+	margin-top: $top
+	padding: $pT $pR $pB $pL
+	font-weight: 600
+
+	@include media($sizes) using ($s)
+		border-radius: calcR($radius, $s)
+		margin-top: calcR($radius, $s)
+		padding: calcR($pT, $s) calcR($pR, $s) calcR($pB, $s) calcR($pL, $s)
+
+	h4
+		$size: 21px
+		$bottom: 24px
+		font-size: $size
+		margin-bottom: $bottom
+
+		@include media($sizes) using ($s)
+			font-size: calcR($size, $s)
+			margin-bottom: calcR($bottom, $s)
+
+	ul
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		$gap: 19px
+		$size: 14px
+		grid-gap: $gap
+		font-size: $size
+
+		@include media($sizes) using ($s)
+			grid-gap: calcR($gap, $s)
+			font-size: calcR($size, $s)
+
+		li
+			display: flex
+			justify-content: space-between
+			border-bottom: 1px solid #cacaca
+			$bottom: 5px
+			padding-bottom: $bottom
+
+			@include media($sizes) using ($s)
+				padding-bottom: calcR($bottom, $s)
+
+			span
+
+				&:nth-child(2)
+					color: #f11c4d
+					font-weight: 400
+					$right: 5px
+					margin-right: $right
+
+					@include media($sizes) using ($s)
+						margin-right: calcR($right, $s)

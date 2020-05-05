@@ -1,0 +1,171 @@
+@import '../../base/mixins'
+
+.wrapper-calculator
+	$width: 662px
+	$radius: 34px
+	$top: 39px
+	width: $width
+	border-radius: $radius
+	background-color: #292833
+	padding-top: $top
+
+	@include media($sizes) using ($s)
+		width: calcR($width, $s)
+		border-radius: calcR($radius, $s)
+		padding-top: calcR($top, $s)
+
+	h4
+		$size: 22px
+		font-size: $size
+		font-weight: 400
+		text-align: center
+
+		@include media($sizes) using ($s)
+			font-size: calcR($size, $s)
+
+	.blocks
+		$width: 490px
+		width: $width
+		margin: 0 auto
+
+		@include media($sizes) using ($s)
+			width: calcR($width, $s)
+	
+	.calculator-header
+		$bottom: 75px
+		margin-bottom: $bottom
+
+		@include media($sizes) using ($s)
+			margin-bottom: calcR($bottom, $s)
+
+		h4
+			$bottom: 75px
+			margin-bottom: $bottom
+
+			@include media($sizes) using ($s)
+				margin-bottom: calcR($bottom, $s)
+
+		.blocks
+			display: grid
+			grid-template-columns: repeat(4, 1fr)
+			$gap: 32px
+			grid-gap: $gap
+
+			@include media($sizes) using ($s)
+				grid-gap: calcR($gap, $s)
+
+			.block
+				width: 100%
+				$height: 60px
+				$radius: 18px
+				$size: 28px
+				height: $height
+				box-shadow: 0 6px 16px rgba(16, 16, 16, 0.29)
+				border-radius: $radius
+				background-color: #19191e
+				font-size: $size
+				display: flex
+				align-items: center
+				justify-content: center
+				cursor: pointer
+
+				@include media($sizes) using ($s)
+					height: calcR($height, $s)
+					border-radius: calcR($radius, $s)
+					font-size: calcR($size, $s)
+
+				&.active
+					background-color: #ec0143
+					box-shadow: 0 6px 16px rgba(255, 0, 0, 0.29)
+
+	.calculator-body
+		$bottom: 64px
+		margin-bottom: $bottom
+
+		@include media($sizes) using ($s)
+			margin-bottom: calcR($bottom, $s)
+
+		h4
+			$bottom: 32px
+			margin-bottom: $bottom
+
+			@include media($sizes) using ($s)
+				margin-bottom: calcR($bottom, $s)
+
+		.blocks
+			display: flex
+			flex-direction: column
+
+			.block
+				width: 100%
+				display: flex
+				flex-direction: column
+				justify-content: center
+				align-items: center
+				display: none
+
+				&.active
+					display: flex
+
+				input
+					$height: 86px
+					$radius: 25px
+					$size: 22px
+					$bottom: 39px
+					$pX: 20px
+					width: 100%
+					height: $height
+					border-radius: $radius
+					background-color: #19191e
+					font-size: $size
+					margin-bottom: $bottom
+					padding: 0 $pX
+
+					@include media($sizes) using ($s)
+						height: calcR($height, $s)
+						border-radius: calcR($radius, $s)
+						font-size: calcR($size, $s)
+						margin-bottom: calcR($bottom, $s)
+						padding: 0 calcR($pX, $s)
+
+		button
+			$width: 255px
+			$height: 60px
+			$radius: 30px
+			$size: 20px
+			width: $width
+			height: $height
+			box-shadow: 0 6px 16px rgba(255, 0, 0, 0.29)
+			background-color: #ec0143
+			border-radius: $radius
+			font-size: $size
+			cursor: pointer
+
+			@include media($sizes) using ($s)
+				height: calcR($height, $s)
+				width: calcR($width, $s)
+				border-radius: calcR($radius, $s)
+				font-size: calcR($size, $s)
+
+
+	.calculator-footer
+		background-color: #101010
+		$radius: 34px
+		$pT: 41px
+		$pX: 35px
+		border-radius: 0 0 $radius $radius
+		padding: $pT $pX $pX
+
+		@include media($sizes) using ($s)
+			border-radius: calcR($radius, $s)
+			padding: calcR($pT, $s) calcR($pX, $s) calcR($pX, $s)
+
+		pre
+			white-space: pre-line
+			$size: 22px
+			font-size: $size
+			text-align: center
+			line-height: normal
+
+			@include media($sizes) using ($s)
+				font-size: calcR($size, $s)

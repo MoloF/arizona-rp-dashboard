@@ -1,0 +1,76 @@
+@import '../variables'
+	
+.authorization
+	width: 637px
+	height: 690px
+	position: relative
+	z-index: 0
+	display: flex
+	flex-direction: column
+	align-items: center
+	flex-shrink: 0
+	font-weight: normal
+
+	.background
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		top: 0
+		z-index: -1
+		user-select: none
+		pointer-events: none
+
+		img
+			width: 100%
+			height: 100%
+
+	h2
+		margin: 130px 0 60px
+		font-weight: 600
+		font-size: 25.71px
+
+	.input-group
+		background-color: rgba(19, 21, 20, 0.78)
+		border-radius: 34.5px
+		height: 69px
+		width: 428px
+		margin-bottom: 22px
+		display: flex
+		align-items: center
+		padding: 30px
+
+		.icon
+			flex-shrink: 0
+			width: 30px
+			margin-right: 25px
+			display: flex
+
+			&.cursor
+				cursor: pointer
+
+		input
+			font-size: 17px
+			background-color: transparent
+			color: #fff
+			width: 100%
+
+			&::-webkit-input-placeholder
+				color: #fff
+
+	button
+		margin: 30px 0 43px
+		font-size: 19px
+		background-image: linear-gradient( 90deg, rgb(236,1,67) 0%, rgb(255,109,109) 100%)
+		box-shadow: 0px 6px 16px 0px rgba(255, 0, 0, 0.29)
+		width: 209px
+		height: 64px
+		border-radius: 32px
+		color: #fff
+		cursor: pointer
+
+	a
+		color: $color-red
+
+	p
+		margin-top: 22px

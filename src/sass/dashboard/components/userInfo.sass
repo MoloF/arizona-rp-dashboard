@@ -1,0 +1,68 @@
+@import '../../base/mixins'
+
+.user-info
+	display: flex
+
+	.info
+		$width: 330px
+		$right: 131px
+		width: $width
+		margin-right: $right
+
+		@include media($sizes) using ($s)
+			width: calcR($width, $s)
+			margin-right: calcR($right, $s)
+
+		p
+			$line: 17px
+			$size: 20px
+			$bottom: 16px
+			line-height: $line
+			font-size: $size
+			margin-bottom: $bottom
+			display: flex
+			justify-content: space-between
+
+			@include media($sizes) using ($s)
+				line-height: calcR($line, $s)
+				font-size: calcR($size, $s)
+				margin-bottom: calcR($bottom, $s)
+
+			span
+
+				&:nth-child(2)
+					color: #ec0143
+
+			&:last-child
+				margin-bottom: 0
+
+	.buttons
+		display: flex
+
+		.btn
+			$width: 171px
+			$height: 36px
+			$size: 14px
+			$radius: 18px
+			$left: 29px
+			width: $width
+			height: $height
+			display: flex
+			align-items: center
+			justify-content: center
+			color: #ffffff
+			font-size: $size
+			border-radius: $radius
+			box-shadow: 0 6px 16px rgba(255, 0, 0, 0.29)
+			background-color: #ec0143
+			margin-left: $left
+
+			@include media($sizes) using ($s)
+				width: calcR($width, $s)
+				height: calcR($height, $s)
+				border-radius: calcR($radius, $s)
+				font-size: calcR($size, $s)
+				margin-left: calcR($left, $s)
+
+			&:first-child
+				margin-left: 0

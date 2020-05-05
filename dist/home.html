@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/app.css" />
+</head>
+
+<body>
+	<div class="container dashboard home">
+		<aside class="navigation">
+			<div class="user-info">
+				<div class="avatar">
+					<img src="images/avatar.png" alt="" />
+					<div class="online"></div>
+				</div>
+				<p class="username">William_Fark</p>
+			</div>
+			<nav>
+				<ul>
+					<li>
+						<a class="active" href="/home.html">
+							<div class="icon">
+								<img src="images/icons/home.png" alt="" />
+							</div>
+							<span>Главная</span>
+						</a>
+					</li>
+					<li>
+						<a>
+							<div class="icon">
+								<img src="images/icons/administration.png" alt="" />
+							</div>
+							<span>Администрация</span>
+						</a>
+						<ul>
+							<li>
+								<a href="/administration.html">
+									<span>Пользователи</span>
+								</a>
+							</li>
+							<li>
+								<a href="/calculator.html">
+									<span>Калькулятор</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="/soft.html">
+							<div class="icon">
+								<img src="images/icons/archive.png" alt="" />
+							</div>
+							<span>Софт</span>
+						</a>
+					</li>
+					<li>
+						<a href="/store.html">
+							<div class="icon">
+								<img src="images/icons/store.png" alt="" />
+							</div>
+							<span>Магазин</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<form action="" method="post">
+				<button type="submit">Выйти</button>
+			</form>
+		</aside>
+
+		<main class="content">
+			<header>
+				<div class="search-box">
+					<form action="" method="post">
+						<button type="submit">
+							<img src="images/icons/search.png" alt="" />
+						</button>
+						<input type="text" placeholder="Поиск" name="search" />
+					</form>
+				</div>
+				<div class="server-info">
+					<div class="logo">
+						<img src="images/logo-v2.png" alt="" />
+						<span>Arizona RP №11 “Prescott”</span>
+					</div>
+				</div>
+
+				<div class="toggle-aside-block">
+					<div></div>
+				</div>
+
+			</header>
+
+			<div class="body">
+				<section class="user-info">
+					<div class="info">
+						<p>William_Fark</p>
+						<p>
+							<span>Репутации до повышения</span>
+							<span class="num-animate">9000</span>
+						</p>
+					</div>
+					<div class="buttons">
+						<a href="#!" class="btn">Перейти в ВК</a>
+						<a href="#!" class="btn">Перейти на форум</a>
+					</div>
+				</section>
+				<section class="activity-list">
+					<h4>Активность</h4>
+					<ul>
+						<li>
+							<span>Дата назначения</span>
+							<span>16.02.2020</span>
+						</li>
+						<li>
+							<span>Отвечено репортов</span>
+							<span class="num-animate">3152</span>
+						</li>
+						<li>
+							<span>Дата повышения</span>
+							<span>02.03.2020</span>
+						</li>
+						<li>
+							<span>Выдано деморганов</span>
+							<span class="num-animate">19</span>
+						</li>
+						<li>
+							<span>Причина назначения</span>
+							<span>Пост лидера</span>
+						</li>
+						<li>
+							<span>Выдано варнов</span>
+							<span class="num-animate">19</span>
+						</li>
+						<li>
+							<span>Последнее обновление</span>
+							<span>03.03.2020 в 11:25:02 система</span>
+						</li>
+						<li>
+							<span>Выдано банов</span>
+							<span class="num-animate">19</span>
+						</li>
+					</ul>
+				</section>
+
+				<section class="tiles">
+					<div class="blocks">
+						<div class="block">
+							<p>Уровень администратора</p>
+							<div class="wrapper">
+								<svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" viewBox="0 0 110 110" class="circle loadCircle">
+									<defs>
+										<filter id="filter" width="100%" height="100%" x="0" y="0" filterUnits="userSpaceOnUse">
+											<feDropShadow dx="0" dy="6" stdDeviation="16" flood-color="rgba(255, 0, 0, 0.29)" flood-opacity="1" />
+										</filter>
+										<linearGradient id="gradient" x1="0" x2="100%" y1="0" y2="100%" gradientUnits="userSpaceOnUse">
+											<stop offset="0" stop-color="#ec0143" />
+											<stop offset="1" stop-color="#ff6d6d" />
+										</linearGradient>
+									</defs>
+									<circle cx="55" cy="55" r="50" stroke-width="9" class="background" />
+									<circle cx="55" cy="55" r="50" stroke-width="9" data-percent="50" stroke-linecap="round" stroke="url(#gradient)" class="fill" filter="url(#filter)" />
+								</svg>
+								<div class="inner">
+									<h2 class="num-animate">2</h2>
+									<span>уровень</span>
+								</div>
+							</div>
+						</div>
+						<div class="block">
+							<p>Должность</p>
+							<h3 class="text-resize">Следящий за МЮ/МО/ТСР</h3>
+						</div>
+						<div class="block">
+							<p>Баллы</p>
+							<div class="wrapper">
+								<svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" viewBox="0 0 110 110" class="circle loadCircle">
+									<circle cx="55" cy="55" r="50" stroke-width="9" class="background" />
+									<circle cx="55" cy="55" r="50" stroke-width="9" data-percent="25" stroke-linecap="round" stroke="url(#gradient)" class="fill" filter="url(#filter)" />
+								</svg>
+								<div class="inner">
+									<h3 class="num-animate">461</h3>
+								</div>
+							</div>
+						</div>
+						<div class="block">
+							<p>Выговоры</p>
+							<h1 class="num-animate text-resize">0</h1>
+						</div>
+						<div class="block">
+							<p>Предупреждения</p>
+							<h1 class="num-animate text-resize">55555555</h1>
+						</div>
+						<div class="block">
+							<p>Префикс</p>
+							<h2 class="text-resize">Сальватручи</h2>
+						</div>
+					</div>
+				</section>
+
+				<section class="activity-chart">
+					<h4>Активность</h4>
+					<div id="activity-chart" class="chart">
+						<div class="bar hidden">
+							<div class="inner" style="height: 50%;">
+								<div class="info">
+									<p>hour</p>
+									<span>translate</span>
+								</div>
+							</div>
+							<div class="label">date</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
+		<aside class="operations-log">
+			<div class="overlay"></div>
+			<h4>Лог операций</h4>
+			<h5>Март 2020</h5>
+			<div class="sort">
+				<span>Сортировать по <img src="images/icons/arrow-down.png" alt="" /></span>
+				<span>Дата <img src="images/icons/arrow-down.png" alt="" /></span>
+			</div>
+			<div class="logs">
+				<div class="log">
+					<div class="avatar">
+						<img src="images/avatar-2.png" alt="" />
+					</div>
+					<p class="date">
+						<span>14.03.2020</span>
+						<span>19:17:41</span>
+					</p>
+					<p class="description">
+						Северо Бьянчи внес изменения в примечания/наказания
+					</p>
+				</div>
+				<div class="log">
+					<div class="avatar">
+						<img src="images/avatar-2.png" alt="" />
+					</div>
+					<p class="date">
+						<span>14.03.2020</span>
+						<span>19:17:41</span>
+					</p>
+					<p class="description">
+						Северо Бьянчи внес изменения в примечания/наказания
+					</p>
+				</div>
+				<div class="log">
+					<div class="avatar">
+						<img src="images/avatar-2.png" alt="" />
+					</div>
+					<p class="date">
+						<span>14.03.2020</span>
+						<span>19:17:41</span>
+					</p>
+					<p class="description">
+						Северо Бьянчи внес изменения в примечания/наказания
+					</p>
+				</div>
+				<div class="log">
+					<div class="avatar">
+						<img src="images/avatar-2.png" alt="" />
+					</div>
+					<p class="date">
+						<span>14.03.2020</span>
+						<span>19:17:41</span>
+					</p>
+					<p class="description">
+						Северо Бьянчи внес изменения в примечания/наказания
+					</p>
+				</div>
+				<div class="log">
+					<div class="avatar">
+						<img src="images/avatar-2.png" alt="" />
+					</div>
+					<p class="date">
+						<span>14.03.2020</span>
+						<span>19:17:41</span>
+					</p>
+					<p class="description">
+						Северо Бьянчи внес изменения в примечания/наказания
+					</p>
+				</div>
+				<div class="log">
+					<div class="avatar">
+						<img src="images/avatar-2.png" alt="" />
+					</div>
+					<p class="date">
+						<span>14.03.2020</span>
+						<span>19:17:41</span>
+					</p>
+					<p class="description">
+						Северо Бьянчи внес изменения в примечания/наказания
+					</p>
+				</div>
+				<div class="log">
+					<div class="avatar">
+						<img src="images/avatar-2.png" alt="" />
+					</div>
+					<p class="date">
+						<span>14.03.2020</span>
+						<span>19:17:41</span>
+					</p>
+					<p class="description">
+						Северо Бьянчи внес изменения в примечания/наказания
+					</p>
+				</div>
+				<div class="log">
+					<div class="avatar">
+						<img src="images/avatar-2.png" alt="" />
+					</div>
+					<p class="date">
+						<span>14.03.2020</span>
+						<span>19:17:41</span>
+					</p>
+					<p class="description">
+						Северо Бьянчи внес изменения в примечания/наказания
+					</p>
+				</div>
+				<div class="log">
+					<div class="avatar">
+						<img src="images/avatar-2.png" alt="" />
+					</div>
+					<p class="date">
+						<span>14.03.2020</span>
+						<span>19:17:41</span>
+					</p>
+					<p class="description">
+						Северо Бьянчи внес изменения в примечания/наказания
+					</p>
+				</div>
+			</div>
+			<div class="notes">
+				<p>Примечания/Наказания</p>
+				<textarea name="" disabled>
+1) Беседа по "ЖБ"[1874243] // Север&#13;&#10;2) Беседа по "ЖБ"[1872007] // Север&#13;&#10;3) -300 репы к повыхе ТОП 2 хелпер&#13;&#10; к повыхе ТОП 2 хелпер&#13;&#10;1) Беседа по "ЖБ"[1874243] // Север&#13;&#10;2) Беседа по "ЖБ"[1872007] // Север&#13;&#10;3) -300 репы к повыхе ТОП 2 хелпер&#13;&#10; к повыхе ТОП 2 хелпер&#13;&#10;1) Беседа по "ЖБ"[1874243] // Север&#13;&#10;2) Беседа по "ЖБ"[1872007] // Север&#13;&#10;3) -300 репы к повыхе ТОП 2 хелпер&#13;&#10; к повыхе ТОП 2 хелпер</textarea>
+			</div>
+		</aside>
+	</div>
+	<script src="js/app.min.js"></script>
+	<script>
+		const chart = document.querySelector('#activity-chart');
+		const array = [{
+				value: 5,
+				label: 31
+			},
+			{
+				value: 8,
+				label: 1
+			},
+			{
+				value: 1,
+				label: 2
+			},
+			{
+				value: 10,
+				label: 3
+			},
+			{
+				value: 7,
+				label: 4
+			},
+			{
+				value: 14,
+				label: 5
+			},
+			{
+				value: 3,
+				label: 6
+			},
+			{
+				value: 3,
+				label: 6
+			},
+			{
+				value: 3,
+				label: 6
+			},
+			{
+				value: 3,
+				label: 6
+			},
+			{
+				value: 3,
+				label: 6
+			},
+		];
+		new app.ActivityChart(chart, JSON.stringify(array));
+		new app.numberAnimate();
+		new app.toggleOperations();
+	</script>
+</body>
+
+</html>

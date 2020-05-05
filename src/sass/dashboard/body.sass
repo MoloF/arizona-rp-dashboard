@@ -1,0 +1,175 @@
+@import '../base/mixins'
+
+main
+	overflow-y: auto
+	height: 100%
+	width: 100%
+	$margin: 345px
+	margin-right: $margin
+	margin-left: $margin
+
+	@include media($sizes) using ($s)
+		margin-right: calcR($margin, $s)
+		margin-left: calcR($margin, $s)
+
+	@include media-1024
+		margin-left: 0 !important
+		margin-right: 0 !important
+
+	&::-webkit-scrollbar
+		width: 0
+
+	&.reset-margin-right
+		margin-right: 0
+	&.reset-margin-left
+		margin-left: 0
+	
+
+	@import './components/header'
+
+	.body
+		$padding-right: 67px
+		$padding-bottom: 52px
+		$padding-left: 71px
+		padding: 0 $padding-right $padding-bottom $padding-left
+
+		@include media($sizes) using ($s)
+			padding: 0 calcR($padding-right, $s) calcR($padding-bottom, $s) calcR($padding-left, $s)
+
+		&.center
+			display: flex
+			align-items: center
+			justify-content: center
+
+		@import './components/userInfo'
+		@import './components/activityList'
+		@import './components/activityChart'
+		@import './components/users'
+		@import './components/cards'
+		@import './components/softs'
+		@import './components/calculator'
+
+		.tiles
+			$margin-top: 34px
+			margin-top: $margin-top
+
+			@include media($sizes) using ($s)
+				margin-top: calcR($margin-top, $s)
+
+			.blocks
+				display: grid
+				$width: 156px
+				grid-template-columns: repeat(auto-fill , minmax($width, 1fr))
+				$grid-gap: 32px
+				grid-gap: $grid-gap
+
+				@include media($sizes) using ($s)
+					grid-gap: calcR($grid-gap, $s)
+					grid-template-columns: repeat(auto-fill , minmax(calcR($width, $s), 1fr))
+
+				.block
+					background-color: #292833
+					position: relative
+					$borderRadius: 26px
+					border-radius: $borderRadius
+					$padding: 13px
+					padding: $padding
+					$height: 172px
+					height: $height
+					min-width: $width
+					width: 100%
+					display: flex
+					flex-direction: column
+
+					@include media($sizes) using ($s)
+						border-radius: calcR($borderRadius, $s)
+						padding: calcR($padding, $s)
+						height: calcR($height, $s)
+						min-width: calcR($width, $s)
+
+					svg.circle
+
+						& circle
+							fill: none
+
+						.background
+							stroke: #19191e
+
+						.fill
+							transform-origin: center
+							transform: rotate(90deg)
+							
+
+					.wrapper
+						position: relative
+						display: flex
+						align-items: center
+						justify-content: center
+						$padding: 10px
+						padding: $padding
+
+						@include media($sizes) using ($s)
+							padding: calcR($padding, $s)
+						
+						svg
+							$width: 110px
+							width: $width
+							height: $width
+							border-radius: 50%
+
+							@include media($sizes) using ($s)
+								width: calcR($width, $s)
+								height: calcR($width, $s)
+
+						.inner
+							position: absolute
+							left: 50%
+							top: 50%
+							transform: translate(-50%, -50%)
+							display: flex
+							flex-direction: column
+							align-items: center
+
+							span
+								$font-size: 10px
+								font-size: $font-size
+
+								@include media($sizes) using ($s)
+									font-size: calcR($font-size, $s)
+
+					p
+						$font-size: 11px
+						$margin-bottom: 4px
+						font-size: $font-size
+						margin-bottom: $margin-bottom
+						white-space: nowrap
+						text-align: center
+
+						@include media($sizes) using ($s)
+							font-size: calcR($font-size, $s)
+							margin-bottom: calcR($margin-bottom, $s)
+
+					h1, h2, h3, h4
+						margin: auto
+						white-space: nowrap
+					h1
+						$font-size: 83px
+						font-size: $font-size
+
+						@include media($sizes) using ($s)
+							font-size: calcR($font-size, $s)
+
+					h2
+						$font-size: 46px
+						font-size: 46px
+
+						@include media($sizes) using ($s)
+							font-size: calcR($font-size, $s)
+
+					h3
+						$font-size: 33px
+						font-size: 33px
+
+						@include media($sizes) using ($s)
+							font-size: calcR($font-size, $s)
+

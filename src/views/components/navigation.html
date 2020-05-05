@@ -1,0 +1,60 @@
+<aside class="navigation">
+	<div class="user-info">
+		<div class="avatar">
+			<img src="images/avatar.png" alt="" />
+			<div class="online"></div>
+		</div>
+		<p class="username">William_Fark</p>
+	</div>
+	<nav>
+		<ul>
+			<li>
+				<a @@if (active === 'home') { class="active" } href="/home.html" >
+					<div class="icon">
+						<img src="images/icons/home.png" alt="" />
+					</div>
+					<span>Главная</span>
+				</a>
+			</li>
+			<li>
+				<a>
+					<div class="icon">
+						<img src="images/icons/administration.png" alt="" />
+					</div>
+					<span>Администрация</span>
+				</a>
+				<ul>
+					<li>
+						<a @@if (active === 'administration') { class="active" } href="/administration.html">
+							<span>Пользователи</span>
+						</a>
+					</li>
+					<li>
+						<a @@if (active === 'calculator') { class="active" } href="/calculator.html">
+							<span>Калькулятор</span>
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a @@if (active === 'soft') { class="active" } href="/soft.html" >
+					<div class="icon">
+						<img src="images/icons/archive.png" alt="" />
+					</div>
+					<span>Софт</span>
+				</a>
+			</li>
+			<li>
+				<a @@if (active === 'store') { class="active" } href="/store.html" >
+					<div class="icon">
+						<img src="images/icons/store.png" alt="" />
+					</div>
+					<span>Магазин</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<form action="" method="post">
+		<button type="submit">Выйти</button>
+	</form>
+</aside>

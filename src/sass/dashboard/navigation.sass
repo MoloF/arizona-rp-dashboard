@@ -1,0 +1,271 @@
+@import '../variables'
+@import '../base/mixins'
+	
+.navigation
+	$backColor: #101010
+	background-color: $backColor
+	box-shadow: 0 10px 29px rgba(0, 0, 0, 0.21)
+	$width: 345px
+	width: $width
+	flex-shrink: 0
+	overflow-y: scroll
+	height: 100%
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 20
+	will-change: transform
+
+	@include media($sizes) using ($s)
+		width: calcR($width, $s)
+
+	@include media-1024
+		width: 100%
+
+	&::-webkit-scrollbar
+		width: 0
+
+	.user-info
+		$padding-top: 66px
+		padding-top: $padding-top
+
+		@include media($sizes) using ($s)
+			padding-top: calcR($padding-top, $s)
+
+		.avatar
+			$margin-right: 100px
+			$margin-left: 88px
+			$width: 158px
+			$margin-bottom: 30px
+			margin: 0 $margin-right $margin-bottom $margin-left
+			display: flex
+			flex-shrink: 0
+			width: $width
+			height: $width
+			position: relative
+			user-select: none
+
+			@include media($sizes) using ($s)
+				width: calcR($width, $s)
+				height: calcR($width, $s)
+				margin: 0 calcR($margin-right, $s) calcR($margin-bottom, $s) calcR($margin-left, $s)
+
+			img
+				width: 100%
+				height: 100%
+				object-fit: contain
+				object-position: center
+
+			.online
+				position: absolute
+				right: 0
+				bottom: 0
+				$width: 27px
+				width: $width
+				height: $width
+
+				@include media($sizes) using ($s)
+					width: calcR($width, $s)
+					height: calcR($width, $s)
+
+				&::after, &::before
+					position: absolute
+					content: ''
+
+				&::after
+					border-radius: 50%
+					background-color: $backColor
+					$gap: -11px
+					right: $gap
+					bottom: $gap
+					left: $gap
+					top: $gap
+
+					@include media($sizes) using ($s)
+						right: calcR($gap, $s)
+						bottom: calcR($gap, $s)
+						left: calcR($gap, $s)
+						top: calcR($gap, $s)
+
+				&::before
+					background-color: $is-online-color
+					border-radius: 50%
+					z-index: 1
+					right: 0
+					bottom: 0
+					left: 0
+					top: 0
+					
+
+
+		.username
+			$margin-left: 88px
+			$margin-bottom: 101px
+			$font-size: 25px
+			margin-bottom: $margin-bottom
+			padding: 0 20%
+			text-align: center
+			word-break: break-all
+			font-size: $font-size
+
+			@include media($sizes) using ($s)
+				margin-bottom: calcR($margin-bottom, $s)
+				font-size: calcR($font-size, $s)
+				padding: 0 calcR($margin-left, $s)
+
+			@include media-1024
+				text-align: left
+
+		.button-group
+			display: grid
+			$gap: 19px
+			$margin-bottom: 60px
+			grid-gap: $gap
+			padding: 0 20%
+			justify-content: center
+			margin-bottom: $margin-bottom
+
+			@include media($sizes) using ($s)
+				grid-gap: calcR($gap, $s)
+				margin-bottom: calcR($margin-bottom, $s)
+
+			.btn
+				$width: 171px
+				$height: 36px
+				$borderRadius: 18px
+				$font-size: 14px
+				width: $width
+				height: $height
+				border-radius: $borderRadius
+				background-image: linear-gradient( 90deg, rgb(236,1,67) 0%, rgb(255,109,109) 100%)
+				box-shadow: 0px 6px 16px 0px rgba(255, 0, 0, 0.29)
+				display: flex
+				align-items: center
+				justify-content: center
+				font-size: $font-size
+				color: #fff
+
+				@include media($sizes) using ($s)
+					width: calcR($width, $s)
+					height: calcR($height, $s)
+					border-radius: calcR($borderRadius, $s)
+					font-size: calcR($font-size, $s)
+
+
+
+	nav
+		$padding-left: 84px
+		padding: 0 10% 0 $padding-left
+
+		@include media($sizes) using ($s)
+			padding: 0 10% 0 calcR($padding-left, $s)
+
+		ul
+			display: grid
+			$gap: 78px
+			grid-gap: $gap
+
+			@include media($sizes) using ($s)
+				grid-gap: calcR($gap, $s)
+
+			li
+				a
+					display: flex
+					align-items: center
+					$height: 30px
+					height: $height
+					cursor: pointer
+
+					@include media($sizes) using ($s)
+						height: calcR($height, $s)
+
+					.icon
+						$width: 35px
+						$margin-right: 20px
+						width: $width
+						margin-right: $margin-right
+
+						@include media($sizes) using ($s)
+							width: calcR($width, $s)
+							margin-right: calcR($margin-right, $s)
+
+						img
+							max-width: 100%
+							max-height: 100%
+							opacity: 0.5
+							transition: opacity .1s
+					
+					span
+						color: #686874
+						$font-size: 19.2px
+						font-size: $font-size
+						transition: color .1s
+
+						@include media($sizes) using ($s)
+							font-size: calcR($font-size, $s)
+
+					&.active, &:hover
+						.icon
+							img
+								opacity: 1
+						span
+							color: #fff
+
+				ul
+					$margin-top: 20px
+					$padding-left: 55px
+					$gap: 20px
+					margin-top: $margin-top
+					padding-left: $padding-left
+					grid-gap: $gap
+					display: none
+
+					@include media($sizes) using ($s)
+						margin-top: calcR($margin-top, $s)
+						padding-left: calcR($padding-left, $s)
+						grid-gap: calcR($gap, $s)
+
+				&:hover, &:active, &:focus, &.active
+					ul
+						display: grid
+
+
+	form
+		$margin-top: 81px
+		$margin-bottom: 66px
+		$margin-left: 88px
+		margin-top: $margin-top
+		padding: 0 20%
+		display: flex
+		justify-content: center
+		margin-bottom: $margin-bottom
+
+		@include media($sizes) using ($s)
+			margin-top: calcR($margin-top, $s)
+			margin-bottom: calcR($margin-bottom, $s)
+
+		@include media-1024
+			justify-content: flex-start
+			padding: 0  calcR($margin-left, $media-1024)
+
+				
+
+		button
+			background-image: linear-gradient( 90deg, rgb(236,1,67) 0%, rgb(255,109,109) 100%)
+			box-shadow: 0px 6px 16px 0px rgba(255, 0, 0, 0.29)
+			$width: 171px
+			$height: 36px
+			$borderRadius: 18px
+			$size: 16px
+			font-size: $size
+			width: $width
+			height: $height
+			border-radius: $borderRadius
+			cursor: pointer
+
+			@include media($sizes) using ($s)
+				font-size: calcR($size, $s)
+				width: calcR($width, $s)
+				height: calcR($height, $s)
+				border-radius: calcR($borderRadius, $s)
+
